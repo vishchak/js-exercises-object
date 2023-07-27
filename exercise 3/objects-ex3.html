@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object Exercise 4</title>
+</head>
+<body>
+<script>
+    function getLength(student) {
+        let length = 0;
+        for (const studentKey in student) {
+            length += 1;
+        }
+
+        return length;
+    }
+
+    let student = {
+        name: "James Jones",
+        age: 18,
+        class: "Scripting",
+    };
+
+    for (const studentKey in student) {
+        console.log(studentKey + " : " + student[studentKey]);
+    }
+    console.log(getLength(student))
+
+    console.log('\n');
+    delete student.class;
+
+    for (const studentKey in student) {
+        console.log(studentKey + " : " + student[studentKey]);
+    }
+
+    console.log(getLength(student))
+</script>
+</body>
+</html>
