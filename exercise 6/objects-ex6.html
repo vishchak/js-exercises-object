@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object Exercise 6</title>
+</head>
+<body>
+<script>
+    var library = [
+        {
+            author: 'Bill Gates',
+            title: 'The Road Ahead',
+            readingStatus: true
+        },
+        {
+            author: 'Steve Jobs',
+            title: 'Walter Isaacson',
+            readingStatus: true
+        },
+        {
+            author: 'Suzanne Collins',
+            title: 'Mockingjay: The Final Book of The Hunger Games',
+            readingStatus: false
+        }];
+
+    for (const book of library) {
+        if (book.readingStatus === true) {
+            console.log(`You haven't finished the book: \n Title: ${book.title} \n Author: ${book.author} \n readingStatus: ${book.readingStatus}`);
+        }
+    }
+</script>
+</body>
+</html>
