@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Object Exercise 1</title>
+</head>
+<body>
+<script>
+
+
+    (function () {
+        'use strict';
+
+        function Employee(name, payRate) {
+            return {
+                name: name,
+                payRate: payRate,
+                getPay() {
+                    return payRate * 40;
+                }
+            }
+        }
+
+        // DO NOT TOUCH the below code!
+        function main() {
+            var a, b, c;
+            var str;
+
+            a = new Employee("Adam Smith", 10.00);
+            b = new Employee("Fred Flintstone", 11.50);
+            c = new Employee("Mary Brown", 20.00);
+
+            str = a.name + "    " + a.payRate + "        " + a.getPay();
+            var firstHeaderTwo = document.createElement("h2");
+            firstHeaderTwo.innerText = str;
+
+            str = b.name + "        " + b.payRate + "        " + b.getPay();
+            var secondHeaderTwo = document.createElement("h2");
+            secondHeaderTwo.innerText = str;
+
+            str = c.name + "        " + c.payRate + "        " + c.getPay();
+            var thirdHeaderTwo = document.createElement("h2");
+            thirdHeaderTwo.innerText = str;
+
+            document.body.appendChild(firstHeaderTwo);
+            document.body.appendChild(secondHeaderTwo);
+            document.body.appendChild(thirdHeaderTwo);
+        }
+
+        main();
+    })();
+</script>
+</body>
+</html>
