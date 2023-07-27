@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object Exercise 3</title>
+</head>
+<body>
+<script>
+    (function () {
+        'use strict';
+
+        // Create the circle function below
+        function toMax3Decimals (x) {
+            return +x.toFixed(2)
+        }
+        function Circle(radius) {
+            return {
+                r: radius,
+                getRadius() {
+                    return radius;
+                },
+                getArea() {
+                    return toMax3Decimals(Math.PI * Math.pow(radius, 2));
+                },
+                getCircumference() {
+                    return toMax3Decimals(2 * Math.PI * radius);
+                }
+            }
+        }
+
+
+        // DO NOT TOUCH the below code!
+        function main() {
+            var aHeaderOne = document.createElement("h1");
+            aHeaderOne.innerText = "Circles";
+            document.body.appendChild(aHeaderOne);
+            showCircle(1.5);
+            showCircle(2);
+            showCircle(5.7);
+            showCircle(7);
+            showCircle(25);
+        }
+
+        function showCircle(r) {
+            var c = new Circle(r);
+            var str = "Radius: " + c.getRadius() + "    "
+                + "Area: " + c.getArea() + "    "
+                + "Circumference: " + c.getCircumference();
+            var aHeaderTwo = document.createElement("h2");
+            aHeaderTwo.innerText = str;
+            document.body.appendChild(aHeaderTwo);
+        }
+
+        main();
+    })();
+</script>
+</body>
+</html>
