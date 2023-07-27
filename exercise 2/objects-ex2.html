@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object Exercise 2</title>
+</head>
+<body>
+<script>
+    (function () {
+        'use strict';
+
+        // Create the rectangle function below
+        function Rectangle(width, height) {
+            return {
+                x: width,
+                y: height,
+                getArea() {
+                    return width * height;
+                },
+                getPerimeter() {
+                    return (width + height) * 2;
+                }
+            }
+        }
+
+        // DO NOT TOUCH the below code!
+        function main() {
+            var aHeaderOne = document.createElement("h1");
+            aHeaderOne.innerText = "Rectangles";
+            document.body.appendChild(aHeaderOne);
+            showRectangle(2, 5);
+            showRectangle(3, 7);
+            showRectangle(14, 2);
+            showRectangle(9, 6);
+            showRectangle(5, 15);
+        }
+
+        function showRectangle(x, y) {
+            var rect = new Rectangle(x, y);
+            var str = rect.width + " by " + rect.height + "    "
+                + "Area: " + rect.getArea() + "    "
+                + "Perimeter: " + rect.getPerimeter();
+            var aHeaderTwo = document.createElement("h2");
+            aHeaderTwo.innerText = str;
+            document.body.appendChild(aHeaderTwo);
+        }
+
+        main();
+    })();
+
+</script>
+</body>
+</html>
